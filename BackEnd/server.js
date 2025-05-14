@@ -1,10 +1,10 @@
-require('dotenv').config()
-const app= require('./src/app')
+require('dotenv').config();
+const { app, connectDB } = require('./src/app');
 
+const PORT = process.env.PORT || 3000;
 
-
-//app listen means start the server whatever you write inside it will be shown on server
-app.listen(3000 , ()=> { 
-console.log('server is running on port http://localhost:3000');
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
 });
-
