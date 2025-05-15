@@ -31,7 +31,7 @@ const AuthForm = () => {
       }
 
       try {
-        const res = await axios.post('http://localhost:3000/api/auth/register', {
+        const res = await axios.post('https://ai-code-reviewer-backend-7gtz.onrender.com/api/auth/register', {
           name,
           email,
           password
@@ -43,7 +43,7 @@ const AuthForm = () => {
       }
     } else {
       try {
-        const res = await axios.post('http://localhost:3000/api/auth/login', {
+        const res = await axios.post('https://ai-code-reviewer-backend-7gtz.onrender.com/api/auth/login', {
           email,
           password
         });
