@@ -24,7 +24,7 @@ function App() {
     setLoading(true)
     setReview("Reviewing...") // Optional: set a temporary message
     try {
-      const response = await axios.post('http://localhost:3000/ai/get-review', { code })
+      const response = await axios.post('https://ai-code-reviewer-backend-7gtz.onrender.com/ai/get-review', { code })
       setReview(response.data)
     } catch (error) {
       setReview("Error fetching review.")
