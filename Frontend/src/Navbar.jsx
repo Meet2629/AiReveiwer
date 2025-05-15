@@ -15,7 +15,7 @@ const Navbar = () => {
       <ul className="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/dashboard">AI-Code-Review</a></li> 
-        <li><a href="#">Contact</a></li>
+        <li><a href="vaghasiyam910@gmail.com">Contact</a></li>
       </ul>
       <button className="nav-btn" onClick={handleLoginClick}>Login and Signup</button>
     </nav>
