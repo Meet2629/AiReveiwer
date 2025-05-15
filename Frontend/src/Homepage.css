@@ -1,0 +1,88 @@
+.home-container {
+  height: 100vh;
+  background-image: url('https://images.alphacoders.com/139/1392299.png'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+  
+  .home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .content {
+    color: rgb(31, 29, 29);
+    text-align: center;
+    z-index: 2;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+  
+  .content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+  }
+  
+  .btn {
+  padding: 14px 28px;
+  font-size: 17px;
+  border: none;
+  border-radius: 35px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff); /* Bright blue gradient */
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.4); /* Glow */
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff); /* Reverse gradient */
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 114, 255, 0.6);
+}
+
+.btn-outline {
+  padding: 14px 28px;
+  font-size: 17px;
+  border: 2px solid #ffffff;
+  border-radius: 35px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline:hover {
+  background: #ffffff;
+  color: #121212;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.35);
+}
