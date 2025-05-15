@@ -1,4 +1,4 @@
-static.json{
+{
   "headers": {
     "/**": {
       "Cache-Control": "no-cache"
