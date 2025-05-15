@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './components/HomePage'
-import AuthForm from './components/AuthForm'
-import Dashboard from './pages/Dashboard'
-import Navbar from './components/Navbar'
+import Home from './HomePage'
+import AuthForm from './AuthForm'
+import Dashboard from './Dashboard'
+import Navbar from './Navbar'
 
 export default function App() {
   
