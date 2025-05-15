@@ -8,7 +8,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: 'https://ai-code-reviewer-frontend-uefi.onrender.com',
+  origin: ['https://ai-code-reviewer-frontend-uefi.onrender.com' , 'http://localhost:5173'],
   credentials: true
 }));
 
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.use('/ai', aiRoutes);
 
-const authRoutes = require('./authRoutes');
+const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
 const connectDB = async () => {
