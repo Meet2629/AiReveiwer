@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.use('/ai', aiRoutes);
 
-const authRoutes = require('./routes/authRoutes');
+const authRoutes = require('./authRoutes');
 app.use('/api/auth', authRoutes);
 
 const connectDB = async () => {
