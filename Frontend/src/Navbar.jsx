@@ -5,14 +5,14 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        AICodeReviewer
+     CodeAI
       </div>
       <ul className="nav-links">
         <li>
           <Link to="/" className="nav-link-btn">Home</Link>
         </li>
         <li>
-          <Link to="/Dashboard" className="nav-link-btn">Start AI-Review</Link>
+          <Link to="/Dashboard" className="nav-link-btn"> AI-Code-Review</Link>
         </li>
       </ul>
       <Link to="/Auth">
