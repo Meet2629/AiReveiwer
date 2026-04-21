@@ -123,11 +123,7 @@ npm start
 
 AI-based tools can automatically analyze code and provide feedback using language models, improving development efficiency and code quality. ([PyPI][1])
 
----
 
-## 📸 Screenshots
-
-*Add your UI screenshots here*
 
 ---
 
@@ -141,7 +137,7 @@ AI-based tools can automatically analyze code and provide feedback using languag
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome!
 
@@ -152,13 +148,13 @@ Contributions are welcome!
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License.
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Meet Vaghasiya**
 
