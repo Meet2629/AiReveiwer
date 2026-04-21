@@ -1,26 +1,26 @@
-Here’s a clean and simple **README.md** you can directly use for your repo 👇
+
 
 ---
 
-# 🚀 AI Code Reviewer (AiReveiwer)
+# AI Code Reviewer (AiReveiwer)
 
 AI Code Reviewer is a smart web-based application that analyzes your code and provides intelligent suggestions to improve quality, readability, and performance using AI.
 
 ---
 
-## 📌 Features
+##  Features
 
-* 🤖 AI-powered code review
-* 🧠 Suggests improvements and best practices
-* ⚡ Fast and real-time feedback
-* 🧾 Clean and readable output
-* 🌐 Full-stack web application (MERN)
-* 🔐 User authentication (Login/Register)
-* 📂 Supports multiple code snippets
+*  AI-powered code review
+*  Suggests improvements and best practices
+*  Fast and real-time feedback
+*  Clean and readable output
+*  Full-stack web application (MERN)
+*  User authentication (Login/Register)
+*  Supports multiple code snippets
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Frontend**
 
@@ -42,7 +42,7 @@ AI Code Reviewer is a smart web-based application that analyzes your code and pr
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AiReveiwer/
