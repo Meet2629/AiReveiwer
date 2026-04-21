@@ -113,7 +113,7 @@ npm start
 
 ---
 
-## 🧑‍💻 How It Works
+## How It Works
 
 1. User logs in / registers
 2. Enters or uploads code
@@ -121,19 +121,19 @@ npm start
 4. AI analyzes and returns suggestions
 5. Results are displayed in UI
 
-AI-based tools can automatically analyze code and provide feedback using language models, improving development efficiency and code quality. ([PyPI][1])
+AI-based tools can automatically analyze code and provide feedback using language models, improving development efficiency and code quality. 
 
 
 
 ---
 
-## 📌 Future Improvements
+##  Future Improvements
 
-* 🌍 Multi-language support
-* 📊 Code quality score
-* 🔗 GitHub integration
-* 📥 File upload support
-* ⚙️ Custom review settings
+*  Multi-language support
+*  Code quality score
+*  GitHub integration
+*  File upload support
+*  Custom review settings
 
 ---
 
