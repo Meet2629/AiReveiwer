@@ -88,6 +88,7 @@ async function generateContent(prompt) {
         throw new Error('fetch is not available in this Node environment. Install undici or use Node 18+.');
     }
 
+    console.log('Sending request to GROQ model', GROQ_MODEL);
     const body = {
         prompt: `${SYSTEM_INSTRUCTION}\n\nUser Prompt:\n${prompt}`,
         max_output_tokens: 512,
@@ -104,6 +105,7 @@ async function generateContent(prompt) {
         body: JSON.stringify(body)
     });
 
+    console.log('GROQ API status', response.status, response.statusText);
     const result = await response.json();
     if (!response.ok) {
         throw new Error(`GROQ API error: ${result.error?.message || response.statusText}`);

@@ -38,7 +38,7 @@ AI Code Reviewer is a smart web-based application that analyzes your code and pr
 
 **AI Integration**
 
-* Google Gemini API
+* GROQ API
 
 ---
 
