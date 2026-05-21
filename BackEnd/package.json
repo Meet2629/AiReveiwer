@@ -14,10 +14,12 @@
     "backend": "file:",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
+    "dotenv": "^16.6.1",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "mongodb": "^7.2.0",
     "mongoose": "^8.13.2",
-    "prismjs": "^1.30.0"
+    "prismjs": "^1.30.0",
+    "undici": "^6.0.0"
   }
 }

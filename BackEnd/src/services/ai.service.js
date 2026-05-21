@@ -1,9 +1,6 @@
-const { GoogleGenerativeAI } = require("@google/generative-ai");
+const { fetch: undiciFetch } = require('undici');
 
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY);
-const model = genAI.getGenerativeModel({
-    model: "gemini-2.0-flash",
-    systemInstruction: `
+const SYSTEM_INSTRUCTION = `
                 Here’s a solid system instruction for your AI code reviewer:
 
                 AI System Instruction: Senior Code Reviewer (7+ Years of Experience)
@@ -76,17 +73,45 @@ const model = genAI.getGenerativeModel({
                 Your mission is to ensure every piece of code follows high standards. Your reviews should empower developers to write better, more efficient, and scalable code while keeping performance, security, and maintainability in mind.
 
                 Would you like any adjustments based on your specific needs? 🚀 
-    `
-});
+    `;
 
+const GROQ_MODEL = "groq-1.1-mini";
 
 async function generateContent(prompt) {
-    const result = await model.generateContent(prompt);
+    const apiKey = process.env.GROQ_API_KEY;
+    if (!apiKey) {
+        throw new Error('Missing GROQ_API_KEY in environment variables');
+    }
 
-    console.log(result.response.text())
+    const fetch = globalThis.fetch || undiciFetch;
+    if (!fetch) {
+        throw new Error('fetch is not available in this Node environment. Install undici or use Node 18+.');
+    }
 
-    return result.response.text();
+    const body = {
+        prompt: `${SYSTEM_INSTRUCTION}\n\nUser Prompt:\n${prompt}`,
+        max_output_tokens: 512,
+        temperature: 0.2,
+        top_p: 0.95
+    };
 
+    const response = await fetch(`https://api.groq.com/v1/models/${GROQ_MODEL}/generate`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${apiKey}`
+        },
+        body: JSON.stringify(body)
+    });
+
+    const result = await response.json();
+    if (!response.ok) {
+        throw new Error(`GROQ API error: ${result.error?.message || response.statusText}`);
+    }
+
+    const text = result.output?.[0]?.content || result.output?.text || result.result?.[0]?.content || JSON.stringify(result);
+    console.log(text);
+    return text;
 }
 
 module.exports = generateContent    
